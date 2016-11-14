@@ -18,6 +18,8 @@ import yagmail
 
 import xlsxwriter
 
+from creds import client1, client2
+
 
 # Below which we don't care about changes - current set at 1 MW
 THRESHOLD = 1
@@ -183,7 +185,7 @@ def get_units_differences(units_old, units_new):
 def email_changes(changed_list, deleted_list, added_list, changed_frame, added_frame, deleted_frame):
     
     print 'begin emails'
-    to = ['nick.culver@gmail.com','tjacobsen@bluedeltaenergy.com','knelson@bluedeltaenergy.com']
+    to = ['nick.culver@gmail.com',client1, client2]
 
 
     # Get today's date
