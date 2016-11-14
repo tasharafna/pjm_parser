@@ -69,12 +69,9 @@ def report_diff(x):
 
     
 # Main function for parsing two units pandas frames 
-def get_units_differences(old, new):
+def get_units_differences(units_old, units_new):
     
     print "diff function begin"
-    # Define
-    units_old = old
-    units_new = new
     
     # Add field
     units_old['version'] = 'old'
